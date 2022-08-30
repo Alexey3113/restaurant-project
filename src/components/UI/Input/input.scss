@@ -1,0 +1,29 @@
+.input {
+    width: 100%;
+    margin-bottom: 20px;
+
+    label {
+        display: block;
+        opacity: 0.7;
+        color: #000;
+        margin-bottom: 10px;
+    }
+
+    input {
+        width: 100%;
+        padding: 15px 25px;
+        outline: none;
+        border: 0;
+        border-radius: 8px;
+        background: #F3F3F6FF;
+        box-shadow: 0px 2px 0px #D7DAE0FF;
+
+        &::placeholder {
+            opacity: 0.7;
+        }
+
+        &:focus {
+            box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+        }
+    }
+}
