@@ -1,10 +1,11 @@
 import React from 'react'
 
-let x;
+
+let b;
 
 const DeliveryPage: React.FC = () => {
   return (
-<div> В разработке ... </div>
+<div>In progress....</div>
   )
 }
 
