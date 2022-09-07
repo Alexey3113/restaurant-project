@@ -5,7 +5,7 @@ let c;
 
 const DeliveryPage: React.FC = () => {
   return (
-                                  <div>In progress...w2.</div>
+                                  <div>In progress...w2sss.</div>
   )
 }
 
