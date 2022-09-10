@@ -13,11 +13,12 @@
     "@types/react-dom": "^18.0.0",
     "@types/react-router-dom": "^5.3.3",
     "@typescript-eslint/eslint-plugin": "^5.36.2",
+    "@typescript-eslint/parser": "^5.36.2",
     "axios": "^0.27.2",
-    "eslint": "^5.16.0",
-    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint": "7.6.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.31.8",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
     "node-sass": "^7.0.1",
@@ -37,7 +38,8 @@
     "eject": "react-scripts eject",
     "precommit": "lint-staged",
     "eslint": "node_modules/.bin/eslint src/",
-    "lint":"pretty-quick --staged && lint-staged"
+    "lint": "npx eslint --ext .js,.jsx,.ts,.tsx --fix --max-warnings 30 .",
+    "mylint": "eslint ./src"
   },
   "eslintConfig": {
     "extends": [
@@ -47,8 +49,7 @@
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
-      "node_modules/.bin/eslint --max-warnings=0",
-      "prettier --write"
+      "node_modules/.bin/eslint --max-warnings=0"
     ]
   },
   "husky": {
