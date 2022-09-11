@@ -10,8 +10,8 @@ function App() {
             <div className="wrapper">
                 <Header />
                 <Routes>
-                    {paths.map((el: IPath) => (
-                        <Route path={el.path} element={el.element} />
+                    {paths.map((el: IPath, i: number) => (
+                        <Route key={i} path={el.path} element={el.element} />
                     ))}
                 </Routes>
                 <Footer />

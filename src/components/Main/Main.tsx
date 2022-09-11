@@ -24,7 +24,6 @@ import "swiper/css/pagination"
 export const Main: React.FC = () => {
     const refReviews = useRef<HTMLDivElement>(null)
 
-    console.log("refReviews", refReviews)
 
     return (
         <main className="main">

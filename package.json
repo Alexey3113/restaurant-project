@@ -39,7 +39,7 @@
     "precommit": "lint-staged",
     "eslint": "node_modules/.bin/eslint src/",
     "lint": "npx eslint --ext .js,.jsx,.ts,.tsx --fix --max-warnings 30 .",
-    "mylint": "eslint ./src"
+    "prepare-husky": "husky install ./.husky"
   },
   "eslintConfig": {
     "extends": [
@@ -49,13 +49,9 @@
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
-      "node_modules/.bin/eslint --max-warnings=0"
+      "npm run lint",
+      "git add"
     ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn lint"
-    }
   },
   "browserslist": {
     "production": [
